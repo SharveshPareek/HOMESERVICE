@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Home Service</string>
+
+    <string name="navigation_open">Open NavigationDrawer</string>
+    <string name="navigation_close">Close NavigationDrawer</string>
+</resources>

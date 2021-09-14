@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/white"
+            android:id="@+id/address_card"
+            android:layout_margin="10dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AC SERVICE"
+                    android:id="@+id/item"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textAllCaps="true"
+                    android:textColor="@color/background_black"
+                    android:paddingStart="17dp"
+                    android:layout_marginBottom="7dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Brand Name"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/background_black"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="ONIDA"
+                        android:textColor="@color/background_black"
+                        android:textSize="14sp"
+                        android:id="@+id/brand_name"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Model"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="5435sds"
+                        android:id="@+id/model"
+                        android:textColor="@color/background_black"
+                        android:textSize="14sp"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Discripition"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="ONIDA"
+                        android:textSize="14sp"
+                        android:id="@+id/discribe"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/background_black"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="54df1s31c"
+                        android:id="@+id/year"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Booked Date"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/background_black"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 - 11:00"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:textColor="@color/background_black"
+                        android:id="@+id/service_date"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Booked Time"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/background_black"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 - 11:00"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:textColor="@color/background_black"
+                        android:id="@+id/service_time"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name"
+                        android:text="54df1s31c"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textColor="@color/background_black"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="54df1s31c"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:id="@+id/phno"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/background_black"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="54df1s31c"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:id="@+id/address"
+                        android:layout_weight="0.5"
+                        android:textStyle="italic"
+                        android:textColor="@color/background_black"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Pin code"
+                        android:layout_weight="0.5"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/background_black"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="54df1s31c"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/pincode"
+                        android:textColor="@color/background_black"
+                        android:textStyle="italic"
+                        android:paddingStart="17dp"
+                        android:paddingBottom="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

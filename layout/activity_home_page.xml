@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawerlayout"
+        tools:openDrawer="start"
+        android:fitsSystemWindows="false"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/navview"
+            android:background="@color/background_black"
+            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/red"
+            app:menu="@menu/menu"
+            android:fitsSystemWindows="false"
+            app:headerLayout="@layout/header"
+            style="@style/drawerarrowStyle"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_wall"
+            tools:context=".HomePage">
+
+        <include
+                layout="@layout/toolbar"
+                android:id="@+id/toolbar"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardLL"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:id="@+id/book_service"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:id="@+id/Bicon"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/request_red"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book Service"
+                            android:id="@+id/BS_TV"
+                            android:gravity="center"
+                            android:textColor="@color/background_black"
+                            android:textSize="18sp"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="italic"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:id="@+id/exchangeCard"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/EXE_icon"
+                            android:src="@drawable/exe_red"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exchange"
+                            android:id="@+id/EXE_TV"
+                            android:textAllCaps="true"
+                            android:gravity="center"
+                            android:textColor="@color/background_black"
+                            android:textSize="18sp"
+                            android:textStyle="italic"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:id="@+id/homeLayout">
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:id="@+id/bookLL"
+                    android:visibility="invisible">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Item"
+                                android:id="@+id/item"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Brand Name"
+                                android:id="@+id/brand_name"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Model "
+                                android:id="@+id/model"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Year of Purchase"
+                                android:id="@+id/year"
+                                android:maxLength="4"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/red"
+                                android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Please discribe your issue in detail here !"
+                                android:id="@+id/describe"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Address"
+                            android:id="@+id/selectAddress"
+                            android:layout_gravity="end"
+                            android:padding="5dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginTop="10dp"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/addressLL">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Name"
+                                    android:id="@+id/name"
+                                    android:maxLength="10"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Address"
+                                    android:id="@+id/address"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Pincode"
+                                    android:id="@+id/pincode"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:maxLength="6"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Phone Number"
+                                    android:id="@+id/phno"
+                                    android:maxLength="10"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                            android:id="@+id/book_service_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book Service now"
+                            android:background="@drawable/red_button_bg"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"/>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/exchangeLL"
+                    android:visibility="invisible"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Item"
+                                android:id="@+id/EXE_item"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Brand Name"
+                                android:id="@+id/EXE_brand_name"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Model "
+                                android:id="@+id/EXE_model"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Year of Purchase"
+                                android:id="@+id/EXE_year"
+                                android:maxLength="4"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/red"
+                                android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            app:hintTextAppearance="@style/TextInputHint"
+                            app:boxStrokeColor="@color/red"
+                            android:textColorHint="@color/red"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Discribe your exepected exechange product"
+                                android:id="@+id/EXE_describe"
+                                android:textColor="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textColorHint="@color/red"
+                                android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Address"
+                            android:id="@+id/EXE_selectAddress"
+                            android:layout_gravity="end"
+                            android:padding="5dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginTop="10dp"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/EXE_addressLL">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Name"
+                                    android:id="@+id/EXE_name"
+                                    android:maxLength="10"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Address"
+                                    android:id="@+id/EXE_address"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Pincode"
+                                    android:id="@+id/EXE_pincode"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:maxLength="6"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="15dp"
+                                app:hintTextAppearance="@style/TextInputHint"
+                                app:boxStrokeColor="@color/red"
+                                android:textColorHint="@color/red"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Phone Number"
+                                    android:id="@+id/EXE_phno"
+                                    android:maxLength="10"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/red"
+                                    android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                            android:id="@+id/EXE_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Request Exechange"
+                            android:background="@drawable/red_button_bg"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/selectLayout">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Address"
+                    android:id="@+id/addNewAddress"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginTop="7dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/addNewAddress"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/address_RV"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:scrollbars="none"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
